@@ -3,12 +3,13 @@
 @section('title', 'Home')
 
 @section('content')
+    <div class="content-center p-8">
 @forelse ($posts as $post)
-<div class="post-item">
+<div class="post-item ">
   <div class="post-content">
-    <h2><a href="{{ route('posts.show', [$post]) }}">{{ $post->title }}</a></h2>
+    <h2><a  href="{{ route('posts.show', [$post]) }}"> <button class="bg-teal-500 hover:bg-amber-500">{{ $post->title }}</button></a></h2>
     <p>{{ $post->description }}</p>
-    <small>Posted by <b>{{ $post->user->name }}</b></small>
+    <small>Posted by <b>{{ $post->user?->name }}</b></small>
   </div>
 
 </div>
@@ -19,4 +20,5 @@
     {{$posts->links()}}
 
 </div>
+    </div>
 @endsection

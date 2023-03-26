@@ -1,10 +1,10 @@
 @extends('layout')
 
-@section('title', 'all comments for this Post '. $post->title)
+@section('title', 'all comments for this Post '. '$post->title')
 
 @section('content')
-
-    @forelse($post->comment as $comment)
+    <div class="content-center p-5" >
+    @forelse($comments as $comment)
         <div class="post-item">
             <div class="post-content">
 
@@ -22,4 +22,9 @@
     @empty
         <h2>There are no comments yet.</h2>
     @endforelse
+    <div class="content-center" >
+        {{$comments->links()}}
+
+    </div>
+    </div>
 @endsection

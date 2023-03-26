@@ -90,7 +90,7 @@ class PostController extends Controller
     {
 
         return view('posts.comments', [
-            'post' => $post,
+            'comments' => $post->comment()->paginate(2),
         ]);
     }
 }

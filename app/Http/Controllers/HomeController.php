@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function home(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('home',['posts'=>Post::paginate(1)]);
+        return view('home',['posts'=>Post::paginate(2)]);
     }
     public function about(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {

@@ -32,8 +32,8 @@
     </div>
   @enderror
 
-  <button type="submit">Register</button>
+  <button class="bg-amber-500" type="submit">Register</button>
 
-  If you already have an account <a href="{{ route('login') }}">login</a>.
+  If you already have an account <a class="text-blue-500 hover:text-blue-600" href="{{ route('login') }}">login</a>.
 </form>
 @endsection

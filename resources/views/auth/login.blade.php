@@ -23,6 +23,6 @@
     </div>
   @enderror
 
-  <button type="submit">Login</button>
+  <button class="bg-amber-500" type="submit">Login</button>
 </form>
 @endsection
